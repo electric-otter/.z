@@ -1,48 +1,103 @@
 <!DOCTYPE HTML>
-<link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZPDS Monetization Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            color: #222;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 20px;
+        }
+        p, ul {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .badge {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .badge img {
+            max-width: 100px;
+            margin-right: 10px;
+        }
+        .note {
+            font-style: italic;
+            color: #777;
+        }
+    </style>
+</head>
 <body>
-  <style>
-    body {
-      font-family: 'Bebas Neue'; font-size: 22px;
-    }
-  </style>
-  <h1>
-    Monetization Restrictions:
-
-    You cannot monetize directly off .z domains. This includes, but is not limited to:
-
-    Selling the domain itself.
-    Charging for domain registration or transferring ownership for profit.
-    Running advertisements or paid services on your domain, such as:
-        Paywalls.
-        Affiliate marketing.
-        Ads or sponsored content.
-
-    Content Monetization:
-
-    While the domain itself cannot be monetized, you are still free to make money from the content hosted on your .z domain, such as:
-
-    Donations (e.g., via platforms like Patreon or similar).
-    Crowdfunding for your projects or services.
-    Offering paid products or services (e.g., selling digital goods, offering consulting, etc.), provided the domain itself remains non-commercial and adheres to this policy.
-
-    What We Don’t Do:
-
-    The ZPDS service is non-commercial:
-
-    We will not charge you for using a .z domain.
-    You cannot charge or monetize your domain or attempt to commercialize it through any form of direct or indirect financial gain via the domain.
-
-    For Companies:
-
-    Monopolizing .z domains is strictly prohibited. If a company attempts to take over multiple .z domains or uses .z domains in a commercialized way (including selling, leasing, or using them for direct profit), the company will be permanently banned from using the ZPDS service.
-
-    Enforcement and Violations:
-
-    Violations of this policy may result in warnings, temporary suspension, or permanent ban from the service.
-    We reserve the right to suspend or revoke access to .z domains that violate this policy, including the removal of any domains that are sold, rented, or commercialized.
-  </h1>
-  <h2>MyDomains</h2>
-  <img src="Untitled.png" alt="Badge">
-  <p>Create a CNAME record and set this to 1.1.1.1, 1.1.1.1 is required or this wont work.</p>
+    <div class="container">
+        <h1>Monetization Restrictions</h1>
+        <p>You cannot monetize directly off .z domains. This includes, but is not limited to:</p>
+        <ul>
+            <li>Selling the domain itself.</li>
+            <li>Charging for domain registration or transferring ownership for profit.</li>
+            <li>Running advertisements or paid services on your domain, such as:</li>
+            <ul>
+                <li>Paywalls.</li>
+                <li>Affiliate marketing.</li>
+                <li>Ads or sponsored content.</li>
+            </ul>
+        </ul>
+        
+        <h2>Content Monetization</h2>
+        <p>While the domain itself cannot be monetized, you can still earn from content hosted on your .z domain through:</p>
+        <ul>
+            <li>Donations (e.g., Patreon or similar platforms).</li>
+            <li>Crowdfunding for your projects or services.</li>
+            <li>Selling digital goods, offering consulting, or providing paid services, provided the domain itself remains non-commercial.</li>
+        </ul>
+        
+        <h2>What We Don’t Do</h2>
+        <p>The ZPDS service is non-commercial:</p>
+        <ul>
+            <li>We will not charge you for using a .z domain.</li>
+            <li>You cannot charge or monetize your domain or attempt to commercialize it for direct or indirect financial gain.</li>
+        </ul>
+        
+        <h2>For Companies</h2>
+        <p>Monopolizing .z domains is strictly prohibited. If a company attempts to acquire multiple .z domains or uses them commercially (e.g., selling, leasing, or profiting directly), they will be permanently banned from the ZPDS service.</p>
+        
+        <h2>Enforcement and Violations</h2>
+        <p>Violations may result in warnings, temporary suspension, or permanent bans. We reserve the right to suspend or revoke access to .z domains that violate this policy.</p>
+        
+        <h2>MyDomains</h2>
+        <div class="badge">
+            <img src="Untitled.png" alt="Badge">
+            <p><strong>Create a CNAME record</strong> and set it to <strong>1.1.1.1</strong>. This setting is required for functionality.</p>
+        </div>
+        <p class="note">Failure to set the CNAME correctly will result in the service not working.</p>
+    </div>
 </body>
+</html>
+
