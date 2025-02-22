@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>.z Domain Registration</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #3e8e41;
+        }
+
+        button {
+            background-color: #3e8e41;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #356c2c;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #3e8e41;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 500px;
+            width: 90%;
+        }
+
+        .modal-header h2 {
+            margin-bottom: 10px;
+        }
+
+        .modal-body {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .modal-footer {
+            text-align: center;
+        }
+
+        .modal-footer button {
+            background-color: #3e8e41;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Media Query for responsiveness */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                width: 90%;
+            }
+
+            h1 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Register Your .z Domain</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="domain-name">Desired Domain Name</label>
+                <input type="text" id="domain-name" name="domain_name" placeholder="yourname.z" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+            </div>
+
+            <button type="button" onclick="showModal()">Register Domain</button>
+        </form>
+
+        <div class="footer">
+            <p>By registering, you agree to our <a href="#">Terms of Service</a>.</p>
+        </div>
+    </div>
+
+    <!-- Modal for CNAME setup instructions -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>CNAME Setup Instructions</h2>
+            </div>
+            <div class="modal-body">
+                <p>To make your .z domain accessible globally, add the following CNAME record:</p>
+                <pre>CNAME yourdomain.z 1.1.1.1</pre>
+                <p>Once you have configured your domain's DNS, your website should be accessible worldwide.</p>
+                <p>For additional security, we recommend using third-party services or MyDomain Security (currently under development) to protect your site.</p>
+                <p><strong>Note: MyDomain Security is still in development and unavailable at this time.</strong></p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()">Got it!</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show the modal
+        function showModal() {
+            document.getElementById('myModal').style.display = 'flex';
+        }
+
+        // Close the modal
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
