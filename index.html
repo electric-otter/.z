@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register a .z domain, its free and worth it!</title>
+    <meta name="description" content=".z domains are free, decentralized, and perfect for non-commercial projects. Learn more about monetization restrictions and benefits.">
+    <title>Register a .z Domain – It's Free and Worth It!</title>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,6 +13,7 @@
             padding: 20px;
             background-color: #f9f9f9;
             color: #333;
+            text-align: center;
         }
         .container {
             max-width: 800px;
@@ -20,10 +22,12 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
         }
         h1, h2 {
             font-family: 'Bebas Neue', sans-serif;
             color: #222;
+            text-align: center;
         }
         h1 {
             font-size: 28px;
@@ -47,15 +51,56 @@
         }
         .badge img {
             max-width: 100px;
+            height: auto;
             margin-right: 10px;
         }
         .note {
             font-style: italic;
             color: #777;
+            text-align: center;
+        }
+        .slide-container {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            opacity: 0;
+            transition: opacity 1s;
+            pointer-events: none;
+        }
+        .slide-container.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .slide-content {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 80%;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            background-color: #ffcc00;
+            color: #222;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ffdb4d;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
         <h1>Monetization Restrictions</h1>
         <p>You cannot monetize directly off .z domains. This includes, but is not limited to:</p>
@@ -69,7 +114,7 @@
                 <li>Ads or sponsored content.</li>
             </ul>
         </ul>
-        
+
         <h2>Content Monetization</h2>
         <p>While the domain itself cannot be monetized, you can still earn from content hosted on your .z domain through:</p>
         <ul>
@@ -77,27 +122,53 @@
             <li>Crowdfunding for your projects or services.</li>
             <li>Selling digital goods, offering consulting, or providing paid services, provided the domain itself remains non-commercial.</li>
         </ul>
-        
+
         <h2>What We Don’t Do</h2>
         <p>The ZPDS service is non-commercial:</p>
         <ul>
             <li>We will not charge you for using a .z domain.</li>
             <li>You cannot charge or monetize your domain or attempt to commercialize it for direct or indirect financial gain.</li>
         </ul>
-        
+
         <h2>For Companies</h2>
         <p>Monopolizing .z domains is strictly prohibited. If a company attempts to acquire multiple .z domains or uses them commercially (e.g., selling, leasing, or profiting directly), they will be permanently banned from the ZPDS service.</p>
-        
+
         <h2>Enforcement and Violations</h2>
         <p>Violations may result in warnings, temporary suspension, or permanent bans. We reserve the right to suspend or revoke access to .z domains that violate this policy.</p>
-        
+
         <h2>MyDomains</h2>
         <div class="badge">
-            <img src="Untitled.png" alt="Badge">
+            <img src="Untitled.png" alt="MyDomains Badge">
             <p><strong>Create a CNAME record</strong> and set it to <strong>1.1.1.1</strong>. This setting is required for functionality.</p>
         </div>
         <p class="note">Failure to set the CNAME correctly will result in the service not working.</p>
     </div>
+
+    <!-- Modal Slide -->
+    <div class="slide-container" id="slide">
+        <div class="slide-content">
+            <h1>Why a .z Domain Will Change Your Life</h1>
+            <p>✔️ 100% Free Forever – No hidden costs!</p>
+            <p>✔️ Decentralized & Privacy-Focused</p>
+            <p>✔️ No Corporate Control – Full Ownership</p>
+            <p>✔️ Perfect for Open-Source & Non-Profit Projects</p>
+            <button onclick="closeSlide()">Got It!</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(() => {
+                document.getElementById("slide").classList.add("show");
+            }, 1000);
+        });
+
+        function closeSlide() {
+            document.getElementById("slide").classList.remove("show");
+        }
+    </script>
+
 </body>
 </html>
+
 
