@@ -5,52 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=".z domains are free, decentralized, and perfect for non-commercial projects. Learn more about monetization restrictions and benefits.">
     <title>Register a .z Domain – It's Free and Worth It!</title>
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma/css/bulma.min.css">
 </head>
 <body class="bg-gray-100 text-gray-900">
-    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg mt-10">
-        <h1 class="text-3xl font-bold text-center text-gray-800">Monetization Restrictions</h1>
-        <p class="mt-4">You cannot monetize directly off .z domains. This includes:</p>
-        <ul class="list-disc ml-6 mt-2 text-gray-700">
-            <li>Selling the domain itself.</li>
-            <li>Charging for registration or transfer.</li>
-            <li>Running advertisements or paid services, such as:</li>
-            <ul class="list-circle ml-6">
-                <li>Paywalls.</li>
-                <li>Affiliate marketing.</li>
-                <li>Ads or sponsored content.</li>
+    <div class="container mt-5">
+        <div class="card p-4 shadow-lg bg-white rounded-lg">
+            <h1 class="title is-3 text-center text-gray-800">Monetization Restrictions</h1>
+            <p class="mt-3">You cannot monetize directly off .z domains. This includes:</p>
+            <ul class="list-group mt-2">
+                <li class="list-group-item">Selling the domain itself.</li>
+                <li class="list-group-item">Charging for registration or transfer.</li>
+                <li class="list-group-item">Running advertisements or paid services, such as:</li>
+                <ul class="list-group mt-2">
+                    <li class="list-group-item">Paywalls.</li>
+                    <li class="list-group-item">Affiliate marketing.</li>
+                    <li class="list-group-item">Ads or sponsored content.</li>
+                </ul>
             </ul>
-        </ul>
 
-        <h2 class="text-2xl font-semibold mt-6">Content Monetization</h2>
-        <p class="mt-2">You can still earn through:</p>
-        <ul class="list-disc ml-6 mt-2 text-gray-700">
-            <li>Donations (e.g., Patreon).</li>
-            <li>Crowdfunding for projects.</li>
-            <li>Selling digital goods or offering services.</li>
-        </ul>
+            <h2 class="title is-4 mt-4">Content Monetization</h2>
+            <p class="mt-2">You can still earn through:</p>
+            <ul class="list-group mt-2">
+                <li class="list-group-item">Donations (e.g., Patreon).</li>
+                <li class="list-group-item">Crowdfunding for projects.</li>
+                <li class="list-group-item">Selling digital goods or offering services.</li>
+            </ul>
 
-        <h2 class="text-2xl font-semibold mt-6">For Companies</h2>
-        <p class="mt-2">Commercial use or monopolizing .z domains is strictly prohibited.</p>
+            <h2 class="title is-4 mt-4">For Companies</h2>
+            <p>Commercial use or monopolizing .z domains is strictly prohibited.</p>
 
-        <h2 class="text-2xl font-semibold mt-6">Enforcement & Violations</h2>
-        <p class="mt-2">Violations may result in warnings, suspension, or bans.</p>
+            <h2 class="title is-4 mt-4">Enforcement & Violations</h2>
+            <p>Violations may result in warnings, suspension, or bans.</p>
 
-        <div class="flex items-center mt-6">
-            <img src="Untitled.png" alt="MyDomains Badge" class="w-20 h-auto mr-4">
-            <p><strong>Create a CNAME record</strong> and set it to <strong>1.1.1.1</strong>.</p>
+            <div class="d-flex align-items-center mt-4">
+                <img src="Untitled.png" alt="MyDomains Badge" class="w-20 h-auto me-3">
+                <p><strong>Create a CNAME record</strong> and set it to <strong>1.1.1.1</strong>.</p>
+            </div>
+            <p class="fst-italic text-muted mt-2">Failure to set the CNAME correctly will result in service failure.</p>
         </div>
-        <p class="italic text-gray-500 text-sm mt-2">Failure to set the CNAME correctly will result in service failure.</p>
     </div>
 
-    <div id="slide" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center text-white opacity-0 transition-opacity duration-1000 pointer-events-none">
-        <div class="bg-cyan-500 p-6 rounded-lg text-center max-w-lg">
-            <h1 class="text-2xl font-bold">Why a .z Domain Will Change Your Life</h1>
+    <div id="slide" class="fixed inset-0 bg-black bg-opacity-80 d-flex align-items-center justify-content-center text-white opacity-0 transition-opacity duration-1000 pointer-events-none">
+        <div class="box has-background-primary-light p-6 rounded-lg text-center max-w-lg">
+            <h1 class="title is-4">Why a .z Domain Will Change Your Life</h1>
             <p class="mt-4">✔️ 100% Free Forever – No hidden costs!</p>
             <p>✔️ Control privacy</p>
             <p>✔️ No Corporate Control – Full Ownership</p>
             <p>✔️ Perfect for Open-Source & Non-Profit Projects</p>
-            <button onclick="closeSlide()" class="mt-4 bg-yellow-400 text-black px-4 py-2 rounded-md hover:bg-yellow-500">Got It!</button>
+            <button onclick="closeSlide()" class="button is-warning mt-4">Got It!</button>
         </div>
     </div>
 
@@ -67,3 +75,4 @@
     </script>
 </body>
 </html>
+
